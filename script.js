@@ -12,31 +12,9 @@ function selectOption(option) {
     } else if (option === 'no') {
         // Change text on the "No" button to "Are you really sure?"
         // Array of 20 annoying questions
-        const annoyingQuestions = [
-            "Are you sure you don't want to be my valentine?",
-            "Are you really sure?",
-            "Are you really really sure??",
-            "Are you absolutely, positively sure???",
-            "Are you 100% sure, no take-backs?",
-            "Are you sure-sure, like beyond all doubt?",
-            "Are you really really really sure????",
-            "Are you sure you’re not just pretending?",
-            "Are you sure you won’t regret this?",
-            "Are you sure you’re not secretly saying yes?",
-            "Are you sure you’re not hesitating?",
-            "Are you sure you’re not just shy?",
-            "Are you sure you don’t want to reconsider?",
-            "Are you sure you’re not being stubborn?",
-            "Are you sure you’re not joking?",
-            "Are you sure you’re not changing your mind?",
-            "Are you sure you’re not 99% sure instead of 100%?",
-            "Are you sure you’re not secretly hoping I’ll ask again?",
-            "Are you sure you’re not just testing me?",
-            "Are you really, truly, absolutely sure???"
-        ];
+
 
         // Track current index
-        let index = 0;
 
         // Function to update the element text
         this.updateQuestion();
@@ -56,6 +34,29 @@ function selectOption(option) {
 
 // Function to flash rainbow colors and then execute a callback function
 function updateQuestion() {
+    const annoyingQuestions = [
+        "Are you sure you don't want to be my valentine?",
+        "Are you really sure?",
+        "Are you really really sure??",
+        "Are you absolutely, positively sure???",
+        "Are you 100% sure, no take-backs?",
+        "Are you sure-sure, like beyond all doubt?",
+        "Are you really really really sure????",
+        "Are you sure you’re not just pretending?",
+        "Are you sure you won’t regret this?",
+        "Are you sure you’re not secretly saying yes?",
+        "Are you sure you’re not hesitating?",
+        "Are you sure you’re not just shy?",
+        "Are you sure you don’t want to reconsider?",
+        "Are you sure you’re not being stubborn?",
+        "Are you sure you’re not joking?",
+        "Are you sure you’re not changing your mind?",
+        "Are you sure you’re not 99% sure instead of 100%?",
+        "Are you sure you’re not secretly hoping I’ll ask again?",
+        "Are you sure you’re not just testing me?",
+        "Are you really, truly, absolutely sure???"
+    ];
+    let index = 0;
     const element = document.getElementById("question-title");
     if (element) {
         element.textContent = annoyingQuestions[index];
