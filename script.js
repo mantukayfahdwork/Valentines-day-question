@@ -10,13 +10,6 @@ function selectOption(option) {
             displayCatHeart(); // Display the milk-and-mocha-bear.gif
         });
     } else if (option === 'no') {
-        // Change text on the "No" button to "Are you really sure?"
-        // Array of 20 annoying questions
-
-
-        // Track current index
-
-        // Function to update the element text
         this.updateQuestion();
         document.getElementById('no-button').innerText = 'Yes';
         document.getElementById('yes-button').innerText = 'I do want to be your Valentine!';
@@ -56,11 +49,12 @@ function updateQuestion() {
         "Are you sure you’re not just testing me?",
         "Are you really, truly, absolutely sure???"
     ];
-    let index = 0;
-    const element = document.getElementById("question-title");
+
+    let element = document.getElementById("question");
+    
     if (element) {
-        element.textContent = annoyingQuestions[index];
-        index = (index + 1) % annoyingQuestions.length; // loop back to start
+        console.log('element', annoyingQuestions[Math.floor(Math.random() * 20)]);
+        element.innerText = annoyingQuestions[Math.floor(Math.random() * 20)];
     }
 }
 function flashRainbowColors(callback) {
